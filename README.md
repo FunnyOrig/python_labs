@@ -39,7 +39,7 @@
 2. Вернуть отсортированный список уникальных значений (по возрастанию).
 3. «Расплющить» список списков/кортежей в один список по строкам (row-major). Если встретилась строка/элемент, который не является списком/кортежем — TypeError.
 
-<img width="450" height="82" alt="Снимок экрана 2026-09-22 112001" src="https://github.com/user-attachments/assets/4a306e5e-752e-4d88-9382-027dfcfa0488" />
+<img width="443" height="341" alt="Снимок экрана 2026-10-06 000340" src="https://github.com/user-attachments/assets/d977e841-95eb-4802-a9ec-86b740f6e2c7" />
 
 ## Задание 2: matrix.py
 
@@ -49,10 +49,10 @@
 2. Сумма по каждой строке. Требуется прямоугольность.
 3. Сумма по каждому столбцу. Требуется прямоугольность.
 
-<img width="229" height="77" alt="Снимок экрана 2026-09-22 114222" src="https://github.com/user-attachments/assets/a98cf27f-22ab-4446-b5f3-ea1fc3436c11" />
+<img width="414" height="336" alt="Снимок экрана 2026-10-06 000412" src="https://github.com/user-attachments/assets/69b4dd78-c6cf-42a0-8742-0b6ff2af71f8" />
 
 ## Задание 3: tuples.py
 
 Код делает тесты, определяя тип записи студента как кортеж и возвращает строку определённого вида.
 
-<img width="317" height="154" alt="Снимок экрана 2026-09-22 114919" src="https://github.com/user-attachments/assets/699aa33d-2dd7-4dc8-ab3f-bccc98f49be7" />
+<img width="405" height="106" alt="Снимок экрана 2026-10-06 002505" src="https://github.com/user-attachments/assets/a8ad5db3-96b0-4a99-a531-0cfc8bbade7c" />
