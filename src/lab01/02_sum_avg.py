@@ -1,0 +1,7 @@
+A = input("a: ")
+B = input("b: ")
+A = A.replace(",", ".")
+B = B.replace(",", ".")
+A = float(A)
+B = float(B)
+print("sum=" + str(A + B) + "; avg=" + str((A+B)/2))
