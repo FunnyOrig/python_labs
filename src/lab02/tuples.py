@@ -1,41 +1,30 @@
 def format_record(rec: tuple[str, str, float]) -> str:
-    """
-    Форматирует запись студента.
 
-    rec:
-        (ФИО, группа, GPA)
-
-    ФИО должно содержать фамилию и имя, либо фамилию,
-    имя и отчество. Лишние пробелы удаляются.
-
-    GPA должен быть числом от 0.0 до 5.0.
-
-    Raises:
-        ValueError: если ФИО или группа пустые, либо GPA вне диапазона.
-        TypeError: если GPA имеет неправильный тип.
-    """
+    if type(rec) != tuple:
+        raise TypeError('Запись обязана быть кортежем')
+    if len(rec) != 3:
+        raise ValueError('Недостаточно данных или перебор')
 
     fio, group, gpa = rec
 
-    # Убираем лишние пробелы
     fio = " ".join(fio.strip().split())
     group = " ".join(group.strip().split())
 
-    # Проверяем ФИО и группу
     if not fio:
         raise ValueError("ФИО не может быть пустым")
+
+    if type(fio)!= str or type(group) != str:
+       raise TypeError('ФИО и Группа - не строки')
 
     if not group:
         raise ValueError("Группа не может быть пустой")
 
-    # Проверяем GPA
     if not isinstance(gpa, (int, float)):
         raise TypeError("GPA должен быть числом")
 
     if not 0.0 <= gpa <= 5.0:
         raise ValueError("GPA должен быть от 0.0 до 5.0")
 
-    # Разделяем ФИО на части
     parts = fio.split()
 
     if len(parts) < 2:
@@ -46,7 +35,6 @@ def format_record(rec: tuple[str, str, float]) -> str:
 
     surname = parts[0].capitalize()
 
-    # Берём инициалы имени и отчества
     initials = ""
 
     for part in parts[1:]:

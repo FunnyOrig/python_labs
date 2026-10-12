@@ -1,12 +1,15 @@
+def check_matrix(mat):
+    if len(mat) == 0:
+        return
+    n = len(mat[0])
+    for row in mat:
+        if len(row) != n:
+            raise ValueError
+
 def transpose(mat: list[list[float | int]]) -> list[list]:
+    check_matrix(mat)
     if len(mat) == 0:
         return []
-    for row in mat:
-        if not isinstance(row, list):
-            raise ValueError
-    if len(mat) > 1:
-        if len(mat[0]) != len(mat[1]):
-            raise ValueError
     res = []
     for i in range(len(mat[0])):
         new_row = []
@@ -16,9 +19,8 @@ def transpose(mat: list[list[float | int]]) -> list[list]:
     return res
 
 def row_sums(mat: list[list[float | int]]) -> list[float]:
+    check_matrix(mat)
     m = []
-    if len(mat[0]) != len(mat[1]):
-        raise ValueError
     for i in mat:
         s = 0
         for j in i:
@@ -27,9 +29,8 @@ def row_sums(mat: list[list[float | int]]) -> list[float]:
     return m
 
 def col_sums(mat: list[list[float | int]]) -> list[float]:
+    check_matrix(mat)
     m = []
-    if len(mat[0]) != len(mat[1]):
-        raise ValueError
     for i in range(len(mat[0])):
         s = 0
         for j in range(len(mat)):
