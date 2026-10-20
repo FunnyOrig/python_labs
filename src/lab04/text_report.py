@@ -22,21 +22,18 @@ def main():
     parser.add_argument(
         "--encoding",
         default="utf-8",
-        help="Кодировка входного файла, например cp1251"
     )
     parser.add_argument(
         "--in",
         dest="input_path",
         type=Path,
         default=DATA_DIR / "input.txt",
-        help="Входной файл"
     )
     parser.add_argument(
         "--out",
         dest="output_path",
         type=Path,
         default=DATA_DIR / "report.csv",
-        help="Выходной CSV-отчёт"
     )
 
     args = parser.parse_args()
