@@ -28,7 +28,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     if not all(isinstance(item, dict) for item in data):
         raise ValueError("json-файл должен содержать список словарей")
 
-    # Все ключи, отсортированные по алфавиту
     fieldnames = sorted(set(
         key for item in data for key in item
     ))
