@@ -12,7 +12,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         raise ValueError("Неверный тип файла")
 
     if not Path(csv_path).is_file():
-            raise FileNotFoundError(f"Файл не найден: {csv_path}")
+        raise FileNotFoundError(f"Файл не найден: {csv_path}")
 
     text = read_text(csv_path)
     rows = list(csv.reader(text.splitlines()))

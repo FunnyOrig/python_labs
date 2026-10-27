@@ -49,7 +49,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
         raise ValueError("Неверный тип файла")
 
     if not Path(csv_path).is_file():
-            raise FileNotFoundError(f"Файл не найден: {csv_path}")
+        raise FileNotFoundError(f"Файл не найден: {csv_path}")
 
     text = read_text(csv_path)
 
