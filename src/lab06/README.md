@@ -55,7 +55,7 @@ def main():
 
     args = parser.parse_args()
 
-    if args.command == "status" and args.top < 1:
+    if args.command == "stats" and args.top < 1:
         parser.error("--top должен быть больше 0")
 
     try:
