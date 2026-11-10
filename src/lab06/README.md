@@ -168,7 +168,7 @@ py -m src.lab06.cli_convert --help
 ```python
 py -m src.lab06.cli_convert json2csv --help
 py -m src.lab06.cli_convert csv2json --help
-py -m src.lab06.cli_convert jcsv2xlsx --help
+py -m src.lab06.cli_convert csv2xlsx --help
 ```
 ![](../../images/lab06/cli_convert_allhelps.png)
 
